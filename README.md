@@ -147,6 +147,6 @@ XOOK is a ground-up C++20 implementation, not a port. While inspired by Aptos JM
 
 ---
 
-**Status:** Production Ready  
-**Version:** 1.0.0  
+**Status:** Beta  
+**Version:** 0.1.0  
 **Maintainer:** Germán Malavé
