@@ -1,6 +1,11 @@
+![C++20](https://img.shields.io/badge/Language-C%2B%2B20-blue.svg)
+![Security](https://img.shields.io/badge/Security-Quantum--Safe-purple.svg)
+![Status](https://img.shields.io/badge/Status-Beta-orange.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
 # XOOK - Merkle Tree Engine
 
-**Xook** (Xök - Shark in Kaqchikel Mayan:: "Tiburón" / "Contar") - High-performance, RAM-optimized Merkle tree implementation in C++20.
+**Xook** (*Xök - Shark in Kaqchikel Mayan:: "Tiburón" / "Contar"*) - High-performance, RAM-optimized Merkle tree implementation in C++20.
 
 ## 🦈 What is XOOK?
 
@@ -10,9 +15,9 @@ XOOK is a Merkle tree implementation, designed for:
 - **TEE/SGX Safety**: Iterative algorithms, no stack overflow risk
 - **Deterministic Consensus**: Guaranteed identical state roots across all nodes
 
-## 🚀 Innovation: SparseBitmap
+## 🚀 SparseBitmap & POPCNT (84% RAM Reduction)
 
-The core innovation is the `SparseBitmap` class, which replaces traditional array-based storage:
+Unlike traditional implementations that use large arrays for child nodes (640 bytes/node), XOOK uses a **2-byte metadata bitmap** and a dense storage vector. Navigation is performed via the CPU's native `POPCNT` instruction.
 
 **Traditional Approach (640 bytes/node):**
 ```cpp
@@ -42,6 +47,9 @@ Physical Storage (dense vector):
 
 Lookup: get_index(7) → POPCNT(0b0000000010001000) = 1 → child_hashes[1]
 ```
+## 🛡️ Post-Quantum Readiness
+
+XOOK is built for the post-quantum era, utilizing 64-byte (512-bit) hashes. This provides a full 256-bit security margin against quantum collision attacks, surpassing the security of legacy 32-byte hash trees.
 
 ## 📊 Performance Comparison
 
@@ -69,7 +77,7 @@ XOOK Components:
 
 ## 🔬 Technical Details
 
-### Deterministic Consensus
+### BFT-Grade Determinism
 
 XOOK guarantees identical state roots across all nodes:
 
