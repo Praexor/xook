@@ -13,7 +13,7 @@ XOOK is a Merkle tree implementation, designed for:
 - **Extreme Memory Efficiency**: 84% reduction vs standard implementations
 - **Hardware Acceleration**: POPCNT instruction for O(1) navigation
 - **TEE/SGX Safety**: Iterative algorithms, no stack overflow risk
-- **Deterministic Consensus**: Guaranteed identical state roots across all nodes
+- **Deterministic**: Guaranteed identical state roots across all nodes
 
 ## 🚀 SparseBitmap & POPCNT (84% RAM Reduction)
 
