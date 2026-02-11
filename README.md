@@ -1,9 +1,8 @@
+# XOOK - Merkle Tree Engine
 ![C++20](https://img.shields.io/badge/Language-C%2B%2B20-blue.svg)
 ![Security](https://img.shields.io/badge/Security-Quantum--Safe-purple.svg)
 ![Status](https://img.shields.io/badge/Status-Beta-orange.svg)
 ![License](https://img.shields.io/badge/License-MIT-green.svg)
-
-# XOOK - Merkle Tree Engine
 
 **Xook** (*Xök - Shark in Kaqchikel Mayan:: "Tiburón" / "Contar"*) - High-performance, RAM-optimized Merkle tree implementation in C++20.
 
